@@ -877,9 +877,10 @@ p {
   align-items: center;
   padding: 0 50px;
 }
-.about-five-container h3{
+.about-five-container h1{
  text-align: center;
  margin-bottom: 20px;
+ font-size: xx-large;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -891,6 +892,11 @@ p {
   .about-five-content {
     padding-left: 0;
   }
+  .about-five-container h1{
+
+    font-size:large;
+   }
+   
 }
 
 
@@ -998,6 +1004,10 @@ p {
 .program-a-container{
   background-color: transparent !important;
 }
+.align-items-center h1{
+  text-align: center !important;
+  margin-bottom: 30px;
+}
 .light-btn-container{
   display: flex;
   align-items: center;
@@ -1024,6 +1034,9 @@ p {
 }
 .program-b-btn-container a{
   color: var(--primary) !important;
+}
+.program-b-container-h1 h1{
+  color: #fff !important;
 }
 
 /* program-b-container =end */
