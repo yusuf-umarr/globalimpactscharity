@@ -26,8 +26,23 @@ function loadProgramType() {
 }
 
 
+//register
   document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
+
+      // Disable the submit button
+        const submitButton = document.getElementById('submitButton');
+        submitButton.disabled = true;
+        submitButton.value = 'Loading...';
+
+        // Simulate a delay for demonstration purposes (Remove this in your actual code)
+        setTimeout(() => {
+            // Your code for form submission here
+
+            // Enable the submit button after the loading process is complete
+            submitButton.disabled = false;
+            submitButton.value = 'Submit';
+        }, 2000); 
   
     // Get the form data
     const name = document.getElementById('name').value;
