@@ -21,7 +21,7 @@ function loadProgramType() {
     }
   
     const dataDiv = document.getElementById("title");
-    dataDiv.textContent = programName + " Registration";
+    dataDiv.textContent = programName + "";
 
 }
 
