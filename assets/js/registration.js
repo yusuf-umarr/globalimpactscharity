@@ -47,6 +47,9 @@ function loadProgramType() {
     // Get the form data
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
+    const address = document.getElementById('address').value;
+    const zipCode = document.getElementById('zipCode').value;
+    const phoneNumber = document.getElementById('phoneNumber').value;
 
       // Generate a registration ID based on time and date
     const registrationId = generateRegistrationId();
@@ -58,6 +61,9 @@ function loadProgramType() {
     const data = {
       name: name,
       email: email,
+      address:address,
+      zipCode:zipCode,
+      phoneNumber:phoneNumber,
       programName:programName,
       registrationId:registrationId,
       createdDate:createdDate
@@ -84,6 +90,9 @@ function loadProgramType() {
         // Clear the input fields
     document.getElementById('name').value = '';
     document.getElementById('email').value = '';
+    document.getElementById('address').value = '';
+    document.getElementById('zipCode').value = '';
+    document.getElementById('phoneNumber').value = '';
     })
     .catch(error => {
       // Handle any errors
