@@ -5,8 +5,8 @@ body {
     background-color: #7ea7ed;
   }
   
-  .container {
-    max-width: 800px;
+  .getContainer {
+    max-width: 900px;
     margin: 0 auto;
     background-color: #497fdd;
     padding: 20px;
@@ -45,4 +45,3 @@ body {
   tr:hover {
     background-color: #155bd5;
   }
-  

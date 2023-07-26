@@ -70,7 +70,6 @@ function loadProgramType() {
 
     };
 
-    // alert(JSON.stringify(data))
   
     //Send the POST request
     fetch(`${basedUrl}/signup`, {
@@ -87,6 +86,7 @@ function loadProgramType() {
 
        // Display a success message
     alert('Registration successful!');
+    // location.reload();
         // Clear the input fields
     document.getElementById('name').value = '';
     document.getElementById('email').value = '';
@@ -127,4 +127,32 @@ function loadProgramType() {
   }
   
   
+  document.addEventListener('DOMContentLoaded', function() {
+    // Fetch the data from the API server
+    fetch(`${basedUrl}/reg-data`)
+      .then(response => response.json())
+      .then(data => {
+        // Filter data for the specific program "HEAR MY CRY, O LORD"
+        const programData = data.filter(entry => entry.programName === "HEAR MY CRY, O LORD");
+  
+        // Display the total count on the page
+        displayTotalCount(programData.length);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  });
+  
+  // Helper function to display the total count on the page
+  function displayTotalCount(totalCount) {
+    const totalCountElement = document.getElementById('totalCount');
 
+    if (programName == "HEAR MY CRY, O LORD") {
+      if (totalCountElement) {
+        totalCountElement.textContent = `Total Seat Left: ${200 - totalCount}`;
+      }
+      
+    }
+  
+  }
+  
